@@ -4,9 +4,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- tailwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- custom design-color -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script> 
     <title>Money Master</title>
 </head>
 <body>
-    
+    <header class="text-center py-6 text-4xl font-bold text-blue-600 shadow-md">Money Master 💰</header>
+    <section class="bg-slate-100 mx-auto w-9/12 ">
+        <div class="grid grid-cols-2  my-4 gap-4">
+            <img height="100%" src="images/money.png" alt="">
+            <div>
+                <h1 class="text-2xl text-center font-bold mt-3">Income</h1>
+                <div class="w-9/12 mx-auto py-3">
+                    <label class="text-xl font-bold" for="income-field">Income: </label>
+                    <input id="income-field" class="p-3 rounded-md bg-slate-100 border-2 border-red-500" type="text" value="10000"> <br>
+                    <h1 class="text-2xl text-center font-bold mt-3">Expenses</h1><br>
+                    <label class="text-xl font-bold" for="food-field">Food: </label>
+                    <input id="food-field" class="p-3 rounded-md bg-slate-100 border-2 border-red-500" type="text"> <br><br>
+                    <label class="text-xl font-bold" for="rent-field">Rent: </label>
+                    <input id="rent-field" class="p-3 rounded-md bg-slate-100 border-2 border-red-500" type="text"> <br><br>
+                    <label class="text-xl font-bold" for="cloth-field">Cloth: </label>
+                    <input id="cloth-field" class="p-3 rounded-md bg-slate-100 border-2 border-red-500" type="text"><br><br>
+                    <button id="calculate-btn" class="bg-blue-300 px-6 py-3 text-2xl font-semibold rounded-md">Calculate</button>
+                    <h3 class="font-bold text-xl pt-4 text-center">Total Expenses: <span id="total-expenses">00</span> TK</h3>
+                    <h3 class="font-bold text-xl py-4 text-center">Balance: <span id="total-balance">00</span> TK</h3> <br>
+                    <label class="text-xl font-bold" for="cloth-field">Save :  </label>
+                    <input id="save-field" class="p-3 rounded-md bg-slate-100 border-2 border-red-500" type="text" value="10"> % <button id="save-btn" class="bg-blue-300 px-6 py-2 text-2xl font-semibold rounded-md">Save</button> <br><br>
+                    <h3 class="font-bold text-xl pt-4 text-center">Saving Amount: <span id="total-save">00</span> TK</h3>
+                    <h3 class="font-bold text-xl py-4 text-center">Remaining Balance: <span id="remaining-balance">1000</span> TK</h3> <br>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="js/main.js"></script>
 </body>
 </html>
